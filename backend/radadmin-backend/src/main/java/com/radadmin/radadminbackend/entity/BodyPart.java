@@ -4,15 +4,9 @@ import jakarta.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(
-    name = "body_parts",
-    uniqueConstraints = {
-        @UniqueConstraint(
-            name = "uk_body_parts_name",
-            columnNames = "name"
-        )
-    }
-)
+@Table(name = "body_parts", uniqueConstraints = {
+        @UniqueConstraint(name = "uk_body_parts_name", columnNames = "name")
+})
 public class BodyPart {
 
     @Id
@@ -72,5 +66,9 @@ public class BodyPart {
 
     public Instant getUpdatedAt() {
         return updatedAt;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
