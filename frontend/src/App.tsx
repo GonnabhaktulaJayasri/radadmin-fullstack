@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Dashboard from "./pages/Dashboard";
 import BodyParts from "./pages/BodyParts";
 import Radiologists from "./pages/Radiologists";
+import Cases from "./pages/Cases";
 
 import "./App.css";
 
@@ -25,6 +26,8 @@ function App() {
         return <Dashboard />;
 
       case "Cases":
+        return <Cases />;
+
       case "Analytics":
       case "Settings":
         return (
